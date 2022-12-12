@@ -16,10 +16,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.ViewModel
 import com.example.jetpackmovie.ui.theme.JetPackMovieTheme
 import com.example.jetpackmovie.view_model.MainViewModel
+import com.example.jetpackmovie.view_model.ProductsViewModel
 
 class MainActivity : ComponentActivity() {
 
-    val mainViewModel by viewModels<MainViewModel>()
+    val mainViewModel by viewModels<MainViewModel>() // for Movie List
+    val productViewModel by viewModels<ProductsViewModel>() // for Product List
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,10 +36,12 @@ class MainActivity : ComponentActivity() {
                 ){
 
 
-                    MovieList(movieList = mainViewModel.movieListResponse)
+                  /*  MovieList(movieList = mainViewModel.movieListResponse)
                     mainViewModel.getMoviesList()
+*/
 
-
+                    ProductList(productList = productViewModel.productsListResponse)
+                    productViewModel.getProductsList()
                 }
             }
         }

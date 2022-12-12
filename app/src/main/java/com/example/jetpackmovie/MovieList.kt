@@ -25,13 +25,4 @@ fun MovieList(movieList : List<MovieModel> ) {
     }
 }
 
-/*
-@Preview
-@Composable
-fun ComposablePreview() {
-    val mainViewModel = MainViewModel()
-    MovieList(movieList = mainViewModel.movieListResponse)
-    mainViewModel.getMoviesList()
-   // MovieSingleItem(movie = item, index , selectedIndex)
-}
-*/
+
